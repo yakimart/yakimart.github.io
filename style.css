@@ -1,10 +1,12 @@
 *{
 	box-sizing: border-box;
+
 }
 
 body{
 	font-family: 'Roboto', sans-serif;
 	background-image: url("images/patt.png");
+
 
 }
 
@@ -13,35 +15,33 @@ body{
 	margin: 0 auto;
 }
 
-.row:after, .menu:after, .field:after{
-	content: "";
-	display: block;
-	clear: both;
-}
-
-[class*="col-"]{
-	float: left;	
-}
-
-.col-md-3{
-	width: 25%;
-	position: relative;
-}
-
-.col-md-6{
-	width: 50%;
-}
-
 .header{
 	background-color: rgba(255, 255, 255, 0.75);
 	padding: 25px 0;
 }
 
+.flex-row, .menu{
+	display: flex;
+}
+
+.box-1{
+	flex: 1;
+}
+
+.box-1 > a > img{
+	margin-top: 7px;
+}
+
+.box-2{
+	flex: 3;
+}
+
+
 .menu li{
-	float: left;
-	width: 25%;
 	border-left: 1px solid;
 	border-color: #2c71b8;
+	text-align: center;
+	width: 140px;
 }
 
 .menu li:last-child{
@@ -49,11 +49,10 @@ body{
 }
 
 .menu a{
+	display: block;	
 	height: 50px;
-	display: block;
-	text-decoration: none;
-	text-align: center;
 	line-height: 50px;
+	text-decoration: none;
 	color: #2c71b8;
 	font-size: 21px;
 }
@@ -63,67 +62,12 @@ body{
 	background-color:#2c71b8;
 }
 
-.field{
-	margin-left: 10%; 
-	margin-top: 5px; 
-	width: 200px;
-	height: 35px;
-	border-color: #4c86c3;
-	border-width:1px;
-	border-style: solid;
-	float: left;
-}
 
-::-webkit-input-placeholder{ 
-	color: #4c86c3;
-}
 
-.search{
-	float: left;
-	padding-left: 5px;
-	width: 100px;
-	background-color: transparent;
-	color: #4c86c3;
-	border: none;
-    outline: none;
-    -webkit-appearance: none;
-    font-size: 21px;
-	font-family: roboto;
-	font-weight:300;
-}
 
-.button{
-	float: right;
-	margin-top: 5px;
-	margin-right: 5px;  
-	width: 20px;
-	height: 20px;
-	background-color: #4c86c3;
-}
 
-.button img{
-	width: 20px;
-	height: 20px;
-}
 
-.shop{
-	margin-top: 5px;
-	width: 35px;
-	height: 35px;
-	background-color: white;
-	float: right;
-	padding: 7px;
-}
 
-.bag{
-	font-size: 12px;
-	text-align: center;
-	line-height: 13px;
-	color: white;
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	background-color: #4c86c3;
-	right: 25px;
-	border-radius: 50px;
-}
+/*[class*="box-"], .menu > li{
+	border: 2px solid black;	
+}*/
