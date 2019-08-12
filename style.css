@@ -25,7 +25,7 @@ body{
 }
 
 .box-1{
-	flex: 1;
+	flex: 3;
 }
 
 .box-1 > a > img{
@@ -33,9 +33,14 @@ body{
 }
 
 .box-2{
-	flex: 3;
+	flex: 6;
 }
 
+.box-3{
+	justify-content: space-around;
+	display: flex;
+	flex: 3;
+}
 
 .menu li{
 	border-left: 1px solid;
@@ -63,6 +68,68 @@ body{
 }
 
 
+.field{
+	position: relative;
+	margin-top: 5px; 
+	width: 200px;
+	height: 35px;
+	border-color: #4c86c3;
+	border-width:1px;
+	border-style: solid;
+}
+
+::-webkit-input-placeholder{ 
+	color: #4c86c3;
+}
+
+.search{
+	padding-left: 5px;
+	width: 100px;
+	background-color: transparent;
+	color: #4c86c3;
+	border: none;
+    outline: none;
+    -webkit-appearance: none;
+    font-size: 21px;
+	font-family: roboto;
+	font-weight:300;
+}
+
+.button{
+	display: block;
+	background-image: url("images/icon.jpg");
+	background-size: cover;
+	position: absolute;
+	top: 5px;
+	right: 5px;  
+	width: 20px;
+	height: 20px;
+	background-color: #4c86c3;
+}
+
+
+.shop{
+	position: relative;
+	margin-top: 5px;
+	width: 35px;
+	height: 35px;
+	background-color: white;
+	padding: 7px;
+}
+
+.bag{
+	top: -10px;
+	left: -10px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 13px;
+	color: white;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: #4c86c3;
+	border-radius: 50px;
+}
 
 
 
