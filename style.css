@@ -37,11 +37,17 @@ body{
 }
 
 .box-3{
-	justify-content: space-around;
+
 	display: flex;
 	flex: 3;
+	justify-content: space-around;
+
 }
 
+
+.menu{
+	justify-content: center;	
+}
 .menu li{
 	border-left: 1px solid;
 	border-color: #2c71b8;
