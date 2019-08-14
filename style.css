@@ -162,12 +162,12 @@ ul.menu > li:hover > .dropdown{
 	padding: 7px;
 }
 
-.bag{
+#bag{
 	top: -10px;
 	left: -10px;
 	font-size: 12px;
 	text-align: center;
-	line-height: 13px;
+	line-height: 15px;
 	color: white;
 	position: absolute;
 	width: 15px;
