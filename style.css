@@ -187,9 +187,10 @@ ul.menu > li:hover > .dropdown{
 
 .main > .container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between
 
 }
+
 .sidebar{
 	flex: 3;
 	height: 845px;
@@ -203,6 +204,7 @@ ul.menu > li:hover > .dropdown{
 	flex-direction: column;
 	flex: 9;
 	height: 845px;
+	margin: 0 0 0 30px; 
 }
 
 .directions{
@@ -234,11 +236,16 @@ ul.menu > li:hover > .dropdown{
 
 .sortlist{
 	flex: 3;
+	height: 5px;
+	background-color: red;
 }
 
 .cards{
+
+	margin-top: 30px;
 	display: flex;
-	flex-wrap: wrap; 
+	flex-wrap: wrap;
+	 
 }
 
 .cards > div{
@@ -248,6 +255,5 @@ ul.menu > li:hover > .dropdown{
 	border: 2px red solid;
 }
 
-/*[class*="box-"], .menu > li{
-	border: 2px solid black;	
-}*/
+
+/*flexbox .catalog margin*/
