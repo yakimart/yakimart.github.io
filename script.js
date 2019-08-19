@@ -1,17 +1,91 @@
-//counting square
-let a = prompt("Enter value and see the square", "");
-alert(a * a);
+// // //FIRST TASK
 
-//arithmetic operations
-let b0 = prompt("Enter first value", "");
-let b1 = prompt("Enter second value", "");
-alert("ADD: " + (+b0 + +b1) + 
-	"\nSUB: " + (b0 - b1) + 
-	"\nMULT: " + (b0 * b1) + 
-	"\nDIV: " + (b0 / b1));
+let period = prompt("Пора року", "");
+let message = (period == "зима") ? ("Зараз зима"):
+	(period == "Зима") ? ("Зараз " + period):
+	(period == "ЗИма") ? ("Зараз " + period):
+	(period == "зИма") ? ("Зараз " + period):
+	(period == "весна") ? ("Зараз " + period):
+	(period == "літо") ? ("Зараз " + period):
+	(period == "осінь") ? ("Зараз " + period):
+	(period == "зИма") ?("Зараз " + period):
+	("Пори року " + period + " не існує");
+alert(message);
 
-//deposit counter
-let sum = prompt("Enter sum", "");
-let term = prompt("Enter term", "");
-let profPerMonth = (sum * 0.18) / 12; //yearly profit divided into 12 months
-alert("Your profit per month: " + profPerMonth);
+
+
+
+// // //SECOND TASK
+let result, rate;
+let sum = +prompt("Введіть суму", "");
+let term = +prompt("Введіть термін", "");
+
+if (term >= 1 && term <= 2){
+	rate = 10;
+} else if (term >= 3 && term < 9){
+	rate = 15;
+} else if (term >= 9 && term <= 11){
+	rate = 17;
+} else if (term >= 12){
+	rate = 18;
+}
+
+alert(rate);
+
+if (rate != null){result = ((sum * rate) / 100) / 12;
+} else{result = "invalid value";}
+
+alert("your monthly profit: " + result);
+
+
+
+
+
+
+// //THIRD TASK
+
+let a = +prompt("Enter first value", "");
+let b = +prompt("Enter second value", "");
+
+let message;
+
+if ((a > 3 && a < 12)  || (b > 5 && b < 13)){
+	message = "TRUE";
+} else {message = "FALSE";}
+
+alert(message);
+
+
+
+// // // додати перевірки: 
+
+// // // через тернарний оператор
+
+
+
+// // // друга задача: з попереднього дз (якщо депозит на 1-2 місяці то облікова ставка 10% річних, якщо від 3-9 місяців то 15% річних, від 9 до 11 місяців 17%, якщо більше року то 18%)
+// // // правильно обраховувати дроби
+
+// // // третя задача: два числа. Якщо А більше трьох і менше 12 або змінна Б більше або дорівнює 5 і менше 13 то вивести текст вірно інакше не вірно
+
+
+
+
+// // // перечитати про оператори (логічні оператори)
+
+
+// // // унарні, бінарні і тернарний 
+// // // унарний (застосовується до одного операнду (+а а++)
+// // // бінарні (до двох операндів)
+// // // тернарний (умова ? true : false)
+
+// // // typeof() - перевірка типу оператора
+// // // Number(a) - перетворити на число
+
+// // // Оператори: математичні, порівняння, умовні, логічні, побітові
+
+// // // == - нестроге (5 = "5") 
+// // // === - строге (5 != "5")
+
+
+

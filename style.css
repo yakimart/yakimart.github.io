@@ -10,6 +10,21 @@ body{
 
 }
 
+.arrow{
+	position: absolute;
+	top: 40%;
+	right: 10%;
+	border: 3px solid #2c71b8;
+	transform: rotate(-45deg);
+	border-top: none;
+	border-right: none;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+}
+
+
+
 .container{
 	width: 1170px;
 	margin: 0 auto;
@@ -43,7 +58,6 @@ body{
 	justify-content: space-around;
 
 }
-
 
 .menu{
 	justify-content: center;	
@@ -80,6 +94,10 @@ body{
 	color: white;
 }
 
+.menu li:hover > a > .arrow{
+	border-color: #fff;
+}
+
 
 .dropdown{
 	padding-top: 15px;
@@ -90,10 +108,18 @@ body{
 	text-align: left;
 }
 
-ul.menu > li:hover > .dropdown{
+ul.menu > li:hover > .dropdown, div.sortlist > span:hover > .dropdown{
 	display: block;
 }
 
+
+div.sortlist > span:hover > .dropdown{
+	width: 100%;
+	z-index: 1;
+	border: 1px white solid;
+	padding: 0px;
+	left: 0;
+}
 
 .dropdown a{
 	line-height: 40px;
@@ -103,14 +129,18 @@ ul.menu > li:hover > .dropdown{
 }
 
 
-.dropdown li:hover{
+.dropdown li:hover, div.sortlist > span:hover{
 	background-color:white;
+	color: #2c71b8;
 }
 
 .dropdown li:hover > a{
 	color: #2c71b8;
 }
 
+div.sortlist > span:hover > .dropdown > li > a{
+	text-decoration:none;
+}
 
 
 .field{
@@ -193,7 +223,7 @@ ul.menu > li:hover > .dropdown{
 .sidebar{
 	flex: 3;
 	height: 845px;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -203,11 +233,13 @@ ul.menu > li:hover > .dropdown{
 	flex-direction: column;
 	flex: 9;
 	height: 845px;
+	margin: 30px 0 0 30px;
+
+
 }
 
 .directions{
-	width: 300px;
-	padding: 30px 0;
+	padding: 0 0 30px 0;
 }
 
 .directions, .directions > a{
@@ -224,6 +256,7 @@ ul.menu > li:hover > .dropdown{
 .top{
 	display: flex;
 	color: white;
+	padding: 0 0 30px 0;
 }	
 
 .label{
@@ -233,20 +266,184 @@ ul.menu > li:hover > .dropdown{
 }
 
 .sortlist{
-	flex: 3;
+	width: 270px;
+	border: 1px white solid;
+}
+
+.sortlist:hover{
+	border: 0px;
+}
+
+.sortlist > span{
+	position: relative;
+	display: block;	
+	height: 40px;
+	line-height: 40px;
+	font-size: 21px;
+	font-weight: 300;	
+	background-color:#2c71b8;
+	padding-left: 18px;
+}
+
+
+.sortlist > span > div.arrow{
+	border-color: white;
+}
+
+
+.sortlist > span:hover > div.arrow{
+	border-color: #2c71b8;;
+}
+
+
+.sortlist > .dropdown{
+	width: 100%;
 }
 
 .cards{
 	display: flex;
-	flex-wrap: wrap; 
+	flex-wrap: wrap;
+	flex: 9;
 }
 
-.cards > div{
-	height: 650px;
-	flex: 3;
+.cards > .row{
 	display: flex;
-	border: 2px red solid;
+	flex-direction: row;
+	flex: 9;
+	justify-content: space-between;
+	margin: 0 0 30px 0;
 }
+
+.cards > .row > div{
+	height: 650px;	
+	width: 270px;
+	display: flex;
+	flex-direction: column;
+	border: 1px white solid;
+}
+
+
+.itempic{
+	position: relative;	
+	background-color: rgba(255, 255, 255, 0.4);
+	height: 180px;	
+	width: 100%;
+	
+}
+.itempic > img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.itempic > div{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.itempic > div > div{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #2c71b8;
+	background-repeat: no-repeat; 
+	background-position: center;
+	margin-bottom: 10px;
+}
+
+.like{
+	background-image: url("images/icon (5).png");
+}
+
+.scale{
+	background-image: url("images/icon (8).png");
+}
+
+.like:hover{
+	background-image: url("images/icon (7).png");
+	background-color: #2c71b8;
+
+}
+
+.scale:hover{
+	background-image: url("images/icon (6).png");
+	background-color: #2c71b8;
+}
+
+
+.descript > p{
+	color: white;
+	margin-top: 15px; 
+	padding-left: 15px;
+	font-weight: 100;
+	font-size: 21px;
+	display: block;
+}
+
+.descript > p:first-child{
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.descript > p:nth-child(2){
+	height: 65px;
+}
+
+.descript > p > span{
+	font-weight: bold;
+	font-size: 21px;
+	text-transform: uppercase;
+}
+
+.descript > p:last-child{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 48px;
+	text-align: center; 
+	padding: 0px;
+}
+
+.descript > p:last-child > span{
+	vertical-align: super;
+}
+
+.buttons{
+	padding: 30px
+}
+
+.buttons > button{
+	color: white;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 21px;
+	border: 1px solid white;
+	text-align: center;
+	height: 50px;
+	width: 210px;
+}
+
+.buttons > button:first-child {
+	background-color: transparent;
+}
+
+.buttons > button:last-child, button:first-child:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.buttons > button:last-child {
+	margin-top: 10px; 
+	background-image: url("images/icon (2).png");
+	background-repeat: no-repeat;
+	background-position: 95%;
+}
+
+
+
+
+	
 
 /*[class*="box-"], .menu > li{
 	border: 2px solid black;	
