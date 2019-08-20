@@ -222,8 +222,71 @@ div.sortlist > span:hover > .dropdown > li > a{
 }
 .sidebar{
 	flex: 3;
-	height: 845px;
 	background-color: rgba(255, 255, 255, 0.3);
+	padding-top: 30px;
+	
+}
+
+.sidebar > div{
+	margin-bottom: 60px;
+	margin-left: 30px;
+}
+
+.sidebar > div > p{
+	color: white;
+	font-weight: lighter;
+	font-size: 21px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.sidebar > div > p:first-child {
+	font-weight: bold;
+	text-transform: uppercase;
+	}
+
+.margin_none, .sidebar > div > p:last-child{
+	margin-bottom: 0px !important;
+	}
+
+
+.sidebar > div:last-child{
+	margin: 0 30px 30px 30px;
+}
+
+label{
+	position: relative;
+
+}
+
+label:before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	border: 1px solid white;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+input[type="checkbox"]:checked + label:before{
+	background-color: white;
+}
+
+
+#show_more{
+	display: block;
+	width: 210px;
+	margin: 30px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-size: 21px;
+	font-weight: lighter;
+	
 }
 
 
@@ -414,7 +477,7 @@ div.sortlist > span:hover > .dropdown > li > a{
 	padding: 30px
 }
 
-.buttons > button{
+.submit, .buttons > button{
 	color: white;
 	text-transform: uppercase;
 	font-weight: bolder;
@@ -423,13 +486,11 @@ div.sortlist > span:hover > .dropdown > li > a{
 	text-align: center;
 	height: 50px;
 	width: 210px;
+	background-color: #2c71b8;
 }
 
-.buttons > button:first-child {
-	background-color: transparent;
-}
 
-.buttons > button:last-child, button:first-child:hover {
+.buttons > button:last-child, button:first-child:hover, .submit:hover{
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -440,7 +501,14 @@ div.sortlist > span:hover > .dropdown > li > a{
 	background-position: 95%;
 }
 
+.buttons > button:last-child:hover{
+	background-color: #2c71b8;
+}
 
+
+.submit{
+	line-height: 50px;
+}
 
 
 	
