@@ -290,6 +290,12 @@ input[type="checkbox"]:checked + label:before{
 }
 
 
+.quantity-input > input{
+	display: block;
+	width: 210px;
+	
+}
+
 
 .catalog{
 	display: flex;
@@ -425,10 +431,9 @@ input[type="checkbox"]:checked + label:before{
 	background-image: url("images/icon (8).png");
 }
 
-.like:hover{
+.like:hover, .liked{
 	background-image: url("images/icon (7).png");
 	background-color: #2c71b8;
-
 }
 
 .scale:hover{
@@ -477,7 +482,7 @@ input[type="checkbox"]:checked + label:before{
 	padding: 30px
 }
 
-.submit, .buttons > button{
+.submit, .buttons > button:last-child{
 	color: white;
 	text-transform: uppercase;
 	font-weight: bolder;
@@ -490,7 +495,7 @@ input[type="checkbox"]:checked + label:before{
 }
 
 
-.buttons > button:last-child, button:first-child:hover, .submit:hover{
+.buttons > button:last-child, .submit:hover{
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
